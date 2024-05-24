@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .left {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+        }
+        .login {
+            font-size: 32px;
+            margin: 80px 0 20px;
+        }
+        .eula {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .right {
+            background: #ecf0f1;
+            padding: 40px;
+            width: 400px;
+            position: relative;
+        }
+        .right svg {
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            z-index: -1;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form label {
+            margin: 10px 0 5px;
+        }
+        .form input[type="email"],
+        .form input[type="password"],
+        .form input[type="text"],
+        .form input[type="date"],
+        .form input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #bdc3c7;
+            width: 100%;
+        }
+        .form input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .form-footer a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: #3498db;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .show-password {
+            display: flex;
+            align-items: center;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .show-password input {
+            margin-right: 10px;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .social-login button {
+            background: none;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            width: 48%;
+        }
+        .social-login button img {
+            margin-right: 10px;
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="left">
+                <img src="images/Bv (1) (1).png" alt="Logo" class="logo">
+                <div class="login">Login</div>
+                <div class="eula">By logging in you agree to the TERMS AND CONDITIONS of Blogverse.inc</div>
+            </div>
+            <div class="right">
+                <svg viewBox="0 0 320 300">
+                    <defs>
+                        <linearGradient id="linearGradient" x1="13" y1="193.5" x2="307" y2="193.5" gradientUnits="userSpaceOnUse">
+                            <stop style="stop-color:#ff00ff;" offset="0" />
+                            <stop style="stop-color:#ff0000;" offset="1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="m 40,120 240,0 c 0,0 25,0.8 25,35 0,34.2 -25,35 -25,35 h -240 c 0,0 -25,4 -25,38.5 0,34.5 25,38.5 25,38.5 h 215 c 0,0 20,-1 20,-25 0,-24 -20,-25 -20,-25 h -190 c 0,0 -20,1.7 -20,25 0,24 20,25 20,25 h 168.57143" />
+                </svg>
+                <div class="form-container" id="sign-in-form">
+                    <form class="form" id="sign-in-form" method="POST">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="show-password">
+                            <input type="checkbox" id="show-password-checkbox">
+                            <label for="show-password-checkbox">Show Password</label>
+                        </div>
+                        <input type="submit" value="Sign In">
+                        <div class="form-footer">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </form>
+                    <div class="social-login">
+                        <button onclick="location.href='https://your-google-auth-url.com'">
+                            G
+                            Sign in with Google
+                        </button>
+                        <button onclick="location.href='https://your-facebook-auth-url.com'">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                            Sign in with Facebook
+                        </button>
+                        <button onclick="location.href='https://your-twitter-auth-url.com'">
+                            X
+                            Sign in with Twitter
+                        </button>
+                    </div>
+                </div>
+                <div class="form-container" id="sign-up-form" style="display: none;">
+                    <form class="form" id="sign-up-form" method="POST">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                        <label for="email-signup">Email</label>
+                        <input type="email" id="email-signup" name="email-signup" required>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                        <label for="password-signup">Password</label>
+                        <input type="password" id="password-signup" name="password-signup" required>
+                        <div class="show-password">
+                            <input type="checkbox" id="show-password-signup-checkbox">
+                            <label for="show-password-signup-checkbox">Show Password</label>
+                        </div>
+                        <input type="submit" value="Sign Up">
+                    </form>
+                    <div class="social-login">
+                        <button onclick="location.href='https://your-google-auth-url.com'">
+                            G
+                            Sign up with Google
+                        </button>
+                        <button onclick="location.href='https://your-facebook-auth-url.com'">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                            Sign up with Facebook
+                        </button>
+                        <button onclick="location.href='https://your-twitter-auth-url.com'">
+                            X
+                            Sign up with Twitter
+                        </button>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button id="toggle-signin" class="toggle-btn">Sign In</button>
+                    <button id="toggle-signup" class="toggle-btn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signInForm = document.getElementById('sign-in-form');
+        const signUpForm = document.getElementById('sign-up-form');
+        const toggleSignInBtn = document.getElementById('toggle-signin');
+        const toggleSignUpBtn = document.getElementById('toggle-signup');
+        const showPasswordCheckbox = document.getElementById('show-password-checkbox');
+        const showPasswordSignupCheckbox = document.getElementById('show-password-signup-checkbox');
+        const passwordInput = document.getElementById('password');
+        const passwordSignupInput = document.getElementById('password-signup');
+
+        toggleSignInBtn.addEventListener('click', () => {
+            signInForm.style.display = 'block';
+            signUpForm.style.display = 'none';
+        });
+
+        toggleSignUpBtn.addEventListener('click', () => {
+            signUpForm.style.display = 'block';
+            signInForm.style.display = 'none';
+        });
+
+        showPasswordCheckbox.addEventListener('change', () => {
+            passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+        });
+
+        showPasswordSignupCheckbox.addEventListener('change', () => {
+            passwordSignupInput.type = showPasswordSignupCheckbox.checked ? 'text' : 'password';
+        });
+
+        signInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+
+        signUpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>BlogVerse</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets --> 
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!-- Custom CSS for Submit Button and Blog Content -->
+    <style>
+        .send_bt_2 button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .send_bt_2 button:hover {
+            background-color: #0056b3;
+        }
+        .massage_text {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container-fluid header_main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="logo" href="index.html"><img src="images/Bv (1) (1).png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <a class="nav-link" href="message.html">New Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="images/serach-icon.png"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Blog Submission Form Section -->
+    <div class="blog_submission_section layout_padding">
+        <div class="container">
+            <div class="contact_taital">Submit Your Blog</div>
+            <div class="contact_section_2 layout_padding">
+                <form action="/submit_blog" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <input type="text" class="input_text" placeholder="Your Name" name="name" required>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <input type="email" class="input_text" placeholder="Your Email" name="email" required>
+                        </div>
+                    </div>
+                    <input type="text" class="input_text" placeholder="Blog Title" name="title" required>
+                    <textarea class="massage_text" placeholder="Blog Content" rows="5" id="content" name="content" required></textarea>
+                    <input type="file" class="input_text" name="images[]" multiple required>
+                    <div class="send_bt_2"><button type="submit">SUBMIT</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="copyright_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <p class="copyright_text">Copyright 2019 All Right Reserved By BlogVerse.inc</a></p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript files--> 
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.bundle.min.js"></script> 
+    <script src="js/jquery-3.0.0.min.js"></script> 
+    <script src="js/plugin.js"></script> 
+    <!-- sidebar --> 
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+    <script src="js/custom.js"></script> 
+    <script src="js/owl.carousel.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function(){
+                $(this).addClass('transition');
+            }, function(){
+                $(this).removeClass('transition');
+            });
+        });
+    </script>  
+</body>
+</html>
